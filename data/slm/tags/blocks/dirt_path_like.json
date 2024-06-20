@@ -1,0 +1,9 @@
+{
+    "values": [
+        {
+            "id": "dirt_path",
+            "required": false
+        },
+        "farmland"
+    ]
+}
