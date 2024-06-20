@@ -1,0 +1,59 @@
+{
+    "values": [
+        "#slm:air_like",
+        "redstone_wire",
+        "beetroots",
+        "nether_wart",
+        "lever",
+        "tripwire_hook",
+        "tripwire",
+        "lily_pad",
+        "wheat",
+        "sugar_cane",
+        "sweet_berry_bush",
+        "#wall_signs",
+        "#buttons",
+        "#rails",
+        "#pressure_plates",
+        "#slm:standing_sign_like",
+        "#slm:attached_melon_stem_like",
+        "#slm:melon_stem_like",
+        "#slm:wall_torches",
+        "#slm:torches",
+        "#slm:grass_like",
+        "#slm:sapling_like",
+        "#slm:wall_banner_like",
+        "#slm:carrots_like",
+        "#slm:vine_like",
+        "red_mushroom",
+        "brown_mushroom",
+        "#small_flowers",
+        "#tall_flowers",
+        "bamboo_sapling",
+        "tall_grass",
+        "large_fern",
+        "bubble_column",
+        "end_gateway",
+        "kelp_plant",
+        "lava",
+        "water",
+        "nether_portal",
+        "#slm:player_can_pass/1_13",
+        {
+            "id": "#slm:player_can_pass/1_16",
+            "required": false
+        },
+        {
+            "id": "#slm:player_can_pass/1_17",
+            "required": false
+        },
+        {
+            "id": "#slm:player_can_pass/1_19",
+            "required": false
+        },
+        {
+            "id": "#slm:player_can_pass/1_20",
+            "required": false
+        }
+    ]
+}
