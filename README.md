@@ -4,10 +4,7 @@ Minecraft 1.20.6
 
 # Showcase
 
-<video width="1920" height="1080" controls>
-    <source src="video.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=0aqticgqvFc" frameborder="0" allowfullscreen></iframe>
 
 # Dependencies
 
