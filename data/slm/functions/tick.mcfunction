@@ -9,7 +9,6 @@ execute as @a[tag=player] at @s if score @s leftclicked matches 2 run function s
 ## 잡고 놓기
 
 execute as @e[tag=interaction] if data entity @s attack run function slm:private/interaction/leftclick_tick
-execute as @a[tag=player] at @s on target if entity @s[tag=collision_shulker] run function slm:private/interaction/leftclick_tick
 
 execute as @a[tag=player] at @s if score @s leftclicked matches 1 run function slm:private/distance/get_distance_1
 execute as @a[tag=player] at @s if score @s leftclicked matches 3.. run function slm:private/distance/get_distance_3
