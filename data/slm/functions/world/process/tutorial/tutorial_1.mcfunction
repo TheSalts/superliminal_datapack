@@ -1,1 +1,0 @@
-title @a[tag=player] subtitle "婅㫅㫅㫅㫅㫅㫅㫅㫅㫅㫅㫅㫅㫅㫅㫅㫅㫅㫅㫅㫅㫅㫅㫅㫅"
