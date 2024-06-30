@@ -3,5 +3,5 @@ execute as @e[tag=temp,tag=target] run data merge entity @s {transformation: {tr
 summon interaction ~ ~ ~ {width: 1f, height: 0.5f, Tags: ["upperInteraction", "interaction", "temp"]}
 summon interaction ~ ~ ~ {width: 1f, height: -0.5f, Tags: ["lowerInteraction", "interaction", "temp"]}
 execute as @e[tag=temp,tag=interaction] at @s run ride @s mount @e[tag=target,tag=temp,limit=1,sort=nearest]
-execute as @e[tag=temp,tag=target] at @s run function slm:private/collision/shulker
+execute as @e[tag=temp,tag=target] at @s run function slm:private/collision/small_shulker
 tag @e remove temp
