@@ -12,16 +12,20 @@ execute store result storage slm:temp/distance_calc sizeX float 0.00001 run data
 execute store result storage slm:temp/distance_calc sizeY float 0.00001 run data get storage slm:target_localscale scaleY 50000
 execute store result storage slm:temp/distance_calc sizeZ float 0.00001 run data get storage slm:target_localscale scaleZ 50000
 data modify storage slm:temp/distance_calc distance set from storage slm:temp/calc_ray_distance distance
+execute store result storage slm:temp/distance_calc dx float 0.00001 run data get storage slm:target_localscale scaleX 50000
+execute store result storage slm:temp/distance_calc dy float 0.00001 run data get storage slm:target_localscale scaleY 50000
+execute store result storage slm:temp/distance_calc dz float 0.00001 run data get storage slm:target_localscale scaleZ 50000
+execute as @e[tag=hitboxCalc] run data modify entity @s width set from storage slm:target_localscale scaleX
+execute as @e[tag=hitboxCalc] run data modify entity @s height set from storage slm:target_localscale scaleY
 
 ## loop
 
 function slm:private/block/calc_hitbox with storage slm:temp/distance_calc
 execute if score $box hitbox.temp matches 1 if score $set hitbox.temp matches 0 if score $distance hitbox.temp matches ..20 run return run function slm:private/block/hitbox_0.5
 execute if score $box hitbox.temp matches 1 if score $set hitbox.temp matches 1 if score $distance hitbox.temp matches ..20 run return run function slm:private/block/hitbox_0.1
+execute if score $set hitbox.temp matches 0 run return run function slm:private/block/set0
 
 ## catch
-
-execute if score $set hitbox.temp matches 0 run return run function slm:private/block/set0
 
 data modify storage slm:temp/calc_ray x set from storage slm:temp/calc_ray_distance distance
 data modify storage slm:temp/calc_ray y set value 0.1f

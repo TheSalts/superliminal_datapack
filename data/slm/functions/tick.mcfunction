@@ -1,6 +1,5 @@
 function slm:world/world_tick
 
-
 execute as @e[tag=player] at @s anchored eyes if score @s leftclicked matches 2 if block ^ ^ ^ structure_void run scoreboard players add @s leftclicked 1
 
 execute unless entity @a[tag=player,scores={leftclicked=1..2}] run tag @e remove targetW
@@ -22,8 +21,12 @@ execute as @e[tag=target,tag=!targetW] unless score @s hitbox.gravity matches 0.
 execute as @e[tag=target,tag=!targetW] at @s if score @s hitbox.gravity matches 0 run function slm:private/gravity/gravity
 execute as @e[tag=targetW] at @s run scoreboard players set @s hitbox.gravity 0
 
-execute as @e[tag=target] at @s if score @s hitbox.gravity matches 1 as @e[tag=collsion_shulker,limit=8,sort=nearest] run tag @s remove shulker.gravity
+execute as @e[tag=target] at @s if score @s hitbox.gravity matches 1 if score @s isSmall matches 1 as @e[tag=collsion_shulker,tag=small,limit=1,sort=nearest] run tag @s remove shulker.gravity
+execute as @e[tag=target] at @s if score @s hitbox.gravity matches 1 unless score @s isSmall matches 1 as @e[tag=collsion_shulker,limit=8,sort=nearest] run tag @s remove shulker.gravity
 
 
 execute as @e[tag=targetW] run data modify entity @s Glowing set value true
 execute as @e[tag=target,tag=!targetW] run data modify entity @s Glowing set value false
+
+execute as @e[tag=killed] at @s run tp @s ~ ~-100000 ~
+kill @e[tag=killed]
