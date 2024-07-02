@@ -1,3 +1,4 @@
-tp @e[tag=collision,tag=small,limit=1,sort=nearest] @s
-$execute as @e[tag=collision,tag=small,limit=1,sort=nearest] at @s run tp @s ~ ~-$(scale_half) ~
-$execute as @e[tag=collision,tag=small,limit=1,sort=nearest] on passengers as @s[type=shulker] run attribute @s generic.scale base set $(scale)
+tp @e[tag=collision,tag=small,tag=temp_collision] @s
+$execute as @e[tag=collision,tag=small,tag=temp_collision] at @s run tp @s ~ ~-$(scale_half) ~
+$execute as @e[tag=collision,tag=small,tag=temp_collision] on passengers as @s[type=shulker] run attribute @s generic.scale base set $(scale)
+tag @e remove temp_collision
