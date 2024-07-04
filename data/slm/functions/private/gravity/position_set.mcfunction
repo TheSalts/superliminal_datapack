@@ -7,12 +7,12 @@
     # get AABB
         $summon marker ~-$(sizeX) ~-$(sizeY) ~-$(sizeZ) {Tags:["AABB_min","AABB.gravity"]}
         $summon marker ~$(sizeX) ~$(sizeY) ~$(sizeZ) {Tags:["AABB_max","AABB.gravity"]}
-        execute store result score @s AABB.min.x as @e[tag=AABB_min] run data get entity @s Pos[0] 100000
-        execute store result score @s AABB.min.y as @e[tag=AABB_min] run data get entity @s Pos[1] 100000
-        execute store result score @s AABB.min.z as @e[tag=AABB_min] run data get entity @s Pos[2] 100000
-        execute store result score @s AABB.max.x as @e[tag=AABB_max] run data get entity @s Pos[0] 100000
-        execute store result score @s AABB.max.y as @e[tag=AABB_max] run data get entity @s Pos[1] 100000
-        execute store result score @s AABB.max.z as @e[tag=AABB_max] run data get entity @s Pos[2] 100000 
+        execute store result score @s AABB.min.x as @e[tag=AABB_min] run data get entity @s Pos[0] 1000000
+        execute store result score @s AABB.min.y as @e[tag=AABB_min] run data get entity @s Pos[1] 1000000
+        execute store result score @s AABB.min.z as @e[tag=AABB_min] run data get entity @s Pos[2] 1000000
+        execute store result score @s AABB.max.x as @e[tag=AABB_max] run data get entity @s Pos[0] 1000000
+        execute store result score @s AABB.max.y as @e[tag=AABB_max] run data get entity @s Pos[1] 1000000
+        execute store result score @s AABB.max.z as @e[tag=AABB_max] run data get entity @s Pos[2] 1000000
         kill @e[tag=AABB.gravity,type=marker]
 
     execute as @e[tag=target,tag=!target.gravity,tag=AABB_check,type=block_display] at @s run function slm:private/collision/calc_aabb
