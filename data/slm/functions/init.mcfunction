@@ -1,6 +1,6 @@
 forceload add 0 0
-execute unless entity @e[tag=distanceCalc] run summon item_display 0 0 0 {Tags: ["distanceCalc"]}
-execute unless entity @e[tag=ratioCalc] run summon item_display 0 0 0 {Tags: ["ratioCalc"]}
+execute unless entity @e[tag=distanceCalc,type=item_display] run summon item_display 0 0 0 {Tags: ["distanceCalc"]}
+execute unless entity @e[tag=ratioCalc,type=item_display] run summon item_display 0 0 0 {Tags: ["ratioCalc"]}
 scoreboard objectives add math.plus dummy
 scoreboard objectives add math.minus dummy
 scoreboard objectives add math.int dummy
@@ -30,10 +30,10 @@ scoreboard objectives add AABB.max.x dummy
 scoreboard objectives add AABB.max.y dummy
 scoreboard objectives add AABB.max.z dummy
 
-tag @e[tag=distanceCalc,limit=1] add init.temp
-tag @e[tag=ratioCalc,limit=1] add init.temp
-kill @e[tag=!init.temp,tag=distanceCalc]
-kill @e[tag=!init.temp,tag=ratioCalc]
+tag @e[tag=distanceCalc,limit=1,type=item_display] add init.temp
+tag @e[tag=ratioCalc,limit=1,type=item_display] add init.temp
+kill @e[tag=!init.temp,tag=distanceCalc,type=item_display]
+kill @e[tag=!init.temp,tag=ratioCalc,type=item_display]
 tag @e remove init.temp
 
 

@@ -13,7 +13,7 @@
         execute store result score @s AABB.max.x as @e[tag=AABB_max] run data get entity @s Pos[0] 100000
         execute store result score @s AABB.max.y as @e[tag=AABB_max] run data get entity @s Pos[1] 100000
         execute store result score @s AABB.max.z as @e[tag=AABB_max] run data get entity @s Pos[2] 100000 
-        kill @e[tag=AABB.gravity]
+        kill @e[tag=AABB.gravity,type=marker]
 
     execute as @e[tag=target,tag=!target.gravity,tag=AABB_check,type=block_display] at @s run function slm:private/collision/calc_aabb
     execute if score $AABB hitbox.gravity matches 1 run return run scoreboard players set @s hitbox.gravity 1
