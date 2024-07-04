@@ -16,7 +16,7 @@
         kill @e[tag=AABB.gravity]
 
     execute as @e[tag=target,tag=!target.gravity,tag=AABB_check,type=block_display] at @s run function slm:private/collision/calc_aabb
-    execute if score @s hitbox.gravity matches 1 run return run say 1
+    execute if score $AABB hitbox.gravity matches 1 run return run scoreboard players set @s hitbox.gravity 1
 
 # block
     scoreboard players set @s hitbox.gravity 0
