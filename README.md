@@ -20,6 +20,6 @@ HmmmPlus
 
 - [ ] Set to gravity always working
 
-- [ ] Add scale 9x shulker
+- [ ] Add 9x scale shulker ( 27 shulkers )
 
 - [ ] Shulker hit detection
