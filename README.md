@@ -16,4 +16,10 @@ HmmmPlus
 
 ## TODO
 
-- [ ] Adjust gravity position
+- [x] Adjust gravity position
+
+- [ ] Set to gravity always working
+
+- [ ] Add scale 9x shulker
+
+- [ ] Shulker hit detection
