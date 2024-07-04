@@ -3,11 +3,8 @@ execute store result storage slm:temp/gravity/size sizeY float 0.00001 run data 
 execute store result storage slm:temp/gravity/size sizeZ float 0.00001 run data get entity @s transformation.scale[2] 50000
 tag @s add target.gravity
 
-scoreboard players set @s isSmall 0
-execute if function slm:private/distance/check_too_small_shulker run scoreboard players set @s isSmall 1
-
-execute if score @s isSmall matches 1 as @e[tag=collision,tag=small,limit=1,sort=nearest,type=block_display] on passengers unless entity @s[tag=shulker.gravity] run tag @s add shulker.gravity
-execute unless score @s isSmall matches 1 as @e[tag=collision,limit=8,sort=nearest,type=block_display] on passengers unless entity @s[tag=shulker.gravity] run tag @s add shulker.gravity
+execute if entity @s[tag=small.target] as @e[tag=collision,tag=small,limit=1,sort=nearest,type=block_display] on passengers unless entity @s[tag=shulker.gravity] run tag @s add shulker.gravity
+execute unless entity @s[tag=small.target] as @e[tag=collision,limit=8,sort=nearest,type=block_display] on passengers unless entity @s[tag=shulker.gravity] run tag @s add shulker.gravity
 ## 중력가속도
     execute if score @s hitbox.gravity matches 0 if score @s gravity_acceration matches 0.. at @s run function slm:private/gravity/position_set with storage slm:temp/gravity/size
     execute if score @s hitbox.gravity matches 0 if score @s gravity_acceration matches 1.. at @s run function slm:private/gravity/position_set with storage slm:temp/gravity/size
@@ -20,10 +17,10 @@ execute unless score @s isSmall matches 1 as @e[tag=collision,limit=8,sort=neare
     execute if score @s hitbox.gravity matches 0 if score @s gravity_acceration matches 8.. at @s run function slm:private/gravity/position_set with storage slm:temp/gravity/size
     scoreboard players add @s gravity_acceration 1
 
-execute if score @s isSmall matches 1 run function slm:private/collision/small.move
-execute unless score @s isSmall matches 1 run function slm:private/collision/move
-execute if score @s hitbox.gravity matches 1 if score @s isSmall matches 1 run function slm:private/collision/small.move
-execute if score @s hitbox.gravity matches 1 unless score @s isSmall matches 1 run function slm:private/collision/move
+execute if entity @s[tag=small.target] run function slm:private/collision/small.move
+execute unless entity @s[tag=small.target] run function slm:private/collision/move
+execute if score @s hitbox.gravity matches 1 if entity @s[tag=small.target] run function slm:private/collision/small.move
+execute if score @s hitbox.gravity matches 1 unless entity @s[tag=small.target] run function slm:private/collision/move
 execute if score @s hitbox.gravity matches 1 run scoreboard players set @s gravity_acceration 0
 execute if score @s hitbox.gravity matches 1 run function slm:private/collision/set_aabb
 execute if score @s hitbox.gravity matches 1 run tag @s remove target.gravity

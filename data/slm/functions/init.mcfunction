@@ -22,7 +22,6 @@ scoreboard objectives add size.min dummy
 scoreboard objectives add shulker.size.min dummy
 scoreboard objectives add gravity_acceration dummy
 scoreboard objectives add gravity dummy
-scoreboard objectives add isSmall dummy
 scoreboard objectives add AABB.min.x dummy
 scoreboard objectives add AABB.min.y dummy
 scoreboard objectives add AABB.min.z dummy
