@@ -2,14 +2,18 @@
 
 Minecraft 1.20.6
 
-# Showcase
+## Showcase
 
 [![Video Label](http://img.youtube.com/vi/0aqticgqvFc/0.jpg)](https://www.youtube.com/watch?v=0aqticgqvFc)
 
-# Dependencies
+## Dependencies
 
-https://github.com/gibbsly/gm
+<https://github.com/gibbsly/gm>
 
-https://github.com/hanmindev/Hmmm
+<https://github.com/hanmindev/Hmmm>
 
 HmmmPlus
+
+## TODO
+
+- [ ] Adjust gravity position
