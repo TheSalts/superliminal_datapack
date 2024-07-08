@@ -18,7 +18,7 @@ execute as @a[tag=player] at @s if score @s leftclicked matches 2 run function s
         execute as @e[tag=target,tag=!targetW,type=block_display] unless score @s hitbox.gravity matches 0..1 run scoreboard players add @s hitbox.gravity 0
         execute as @e[tag=target,tag=!targetW,type=block_display] at @s if score @s hitbox.gravity matches 0 run function slm:private/gravity/gravity
         execute as @e[tag=targetW,type=block_display] at @s run scoreboard players set @s hitbox.gravity 0
-        execute as @e[tag=target,tag=small.target,type=block_display] at @s if score @s hitbox.gravity matches 1 as @e[tag=collsion_shulker,tag=small,limit=1,sort=nearest] run tag @s remove shulker.gravity
+        execute as @e[tag=target,tag=small.target,type=block_display] at @s if score @s hitbox.gravity matches 1 as @n[tag=collsion_shulker,tag=small] run tag @s remove shulker.gravity
         execute as @e[tag=target,tag=!small.target,type=block_display] at @s if score @s hitbox.gravity matches 1 as @e[tag=collsion_shulker,limit=8,sort=nearest] run tag @s remove shulker.gravity
 
     execute as @e[tag=targetW,type=block_display] run data modify entity @s Glowing set value true

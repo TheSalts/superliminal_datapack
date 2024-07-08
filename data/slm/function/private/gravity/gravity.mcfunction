@@ -4,7 +4,7 @@ execute store result storage slm:temp/gravity/size sizeZ float 0.00001 run data 
 tag @s add target.gravity
 scoreboard players set $adjust hitbox.gravity 0
 
-execute if entity @s[tag=small.target] as @e[tag=collision,tag=small,limit=1,sort=nearest,type=block_display] on passengers unless entity @s[tag=shulker.gravity] run tag @s add shulker.gravity
+execute if entity @s[tag=small.target] as @n[tag=collision,tag=small,type=block_display] on passengers unless entity @s[tag=shulker.gravity] run tag @s add shulker.gravity
 execute unless entity @s[tag=small.target] as @e[tag=collision,limit=8,sort=nearest,type=block_display] on passengers unless entity @s[tag=shulker.gravity] run tag @s add shulker.gravity
 ## 중력가속도
     execute if score @s hitbox.gravity matches 0 if score @s gravity_acceration matches 0.. at @s run function slm:private/gravity/position_set with storage slm:temp/gravity/size
