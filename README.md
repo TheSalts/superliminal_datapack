@@ -18,6 +18,8 @@ HmmmPlus
 
 - [x] Adjust gravity position
 
+- [ ] Fix negative distance when attached to a wall
+
 - [ ] Set to gravity always working
 
 - [ ] Add 9x scale shulker ( 27 shulkers )
