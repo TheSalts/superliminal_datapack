@@ -1,6 +1,6 @@
 # Forced Perpective Datapack (WIP)
 
-Minecraft 1.20.6
+Minecraft 1.21
 
 ## Showcase
 
