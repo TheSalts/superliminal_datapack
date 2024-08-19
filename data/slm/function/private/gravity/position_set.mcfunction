@@ -26,5 +26,4 @@
     execute if score $adjust hitbox.gravity matches 1 if score @s hitbox.gravity matches 1 if function slm:private/gravity/adjust_position run return run scoreboard players set $adjust hitbox.gravity 0
     execute if score $adjust hitbox.gravity matches 0 if score @s hitbox.gravity matches 1 run tp @s ~ ~0.05 ~
     execute if score $adjust hitbox.gravity matches 0 if score @s hitbox.gravity matches 1 run scoreboard players set $adjust hitbox.gravity 1
-    execute if score $adjust hitbox.gravity matches 1 run tp @s ~ ~-0.01 ~
     execute if score $adjust hitbox.gravity matches 1 run function slm:private/gravity/position_set

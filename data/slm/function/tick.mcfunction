@@ -1,5 +1,3 @@
-function slm:world/world_tick
-
 execute as @e[tag=player] at @s anchored eyes if score @s leftclicked matches 2 if block ^ ^ ^ structure_void run scoreboard players add @s leftclicked 1
 
 execute unless entity @a[tag=player,scores={leftclicked=1..2}] run tag @e remove targetW
@@ -24,3 +22,4 @@ execute as @a[tag=player] at @s if score @s leftclicked matches 2 run function s
     execute as @e[tag=targetW,type=block_display] run data modify entity @s Glowing set value true
     execute as @e[tag=target,tag=!targetW,type=block_display] run data modify entity @s Glowing set value false
 
+function slm:world/world_tick
