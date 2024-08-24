@@ -9,3 +9,4 @@ execute as @e[tag=targetInteraction,type=interaction] at @s if data entity @s at
 
 execute if data entity @s attack run data remove entity @s attack
 execute as @a[tag=player] at @s run playsound entity.item.pickup neutral @s ~ ~ ~ 1 1 1
+

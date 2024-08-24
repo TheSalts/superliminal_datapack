@@ -23,3 +23,5 @@ execute as @a[tag=player] at @s if score @s leftclicked matches 2 run function s
     execute as @e[tag=target,tag=!targetW,type=block_display] run data modify entity @s Glowing set value false
 
 function slm:world/world_tick
+
+# execute as @e[tag=targetW,type=block_display] at @s run scoreboard players set @e[tag=target,tag=!targetW,type=block_display,distance=..10,scores={hitbox.gravity=1}] hitbox.gravity 0
