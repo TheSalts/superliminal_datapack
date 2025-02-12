@@ -1,4 +1,4 @@
-# Forced Perpective Datapack (WIP)
+# Forced Perspective Datapack (WIP)
 
 Minecraft 1.21
 
