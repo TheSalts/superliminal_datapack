@@ -2,13 +2,13 @@
 
 Minecraft 1.21
 
+# Download at Release!
+
+<https://github.com/TheSalts/superliminal_datapack/releases>
+
 ## Showcase
 
 [![Video Label](http://img.youtube.com/vi/0aqticgqvFc/0.jpg)](https://www.youtube.com/watch?v=0aqticgqvFc)
-
-## Installation
-
-<https://github.com/TheSalts/superliminal_datapack/releases>
 
 ## Dependencies
 
