@@ -2,7 +2,7 @@
 
 Minecraft 1.21
 
-# Download at Release!
+# Download from Release! (Dependencies included)
 
 <https://github.com/TheSalts/superliminal_datapack/releases>
 
