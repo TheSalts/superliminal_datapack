@@ -27,3 +27,5 @@ HmmmPlus
 - [ ] Set to gravity always working
 
 - [ ] Add 9x scale shulker ( 27 shulkers )
+
+- [ ] Change hmmm codes to gm
