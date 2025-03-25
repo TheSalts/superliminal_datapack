@@ -24,7 +24,7 @@ Minecraft 1.21
 
 ### Killing the blocks
 
-Just left click with swords.
+Just left click with any swords.
 
 ## Dependencies
 
