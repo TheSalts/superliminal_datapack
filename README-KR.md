@@ -1,6 +1,6 @@
 # 슈퍼리미널 데이터팩 (Forced Perspective)
 
-이 데이터팩은 Steam 게임 *[Superliminal](https://store.steampowered.com/app/1049410/Superliminal/?l=koreana)*의 핵심 메커니즘인 **[Forced Perspective](https://en.wikipedia.org/wiki/Forced_perspective)**를 구현한 마인크래프트 데이터팩입니다.
+이 데이터팩은 Steam 게임 _[Superliminal](https://store.steampowered.com/app/1049410/Superliminal/?l=koreana)_ 의 핵심 메커니즘인 **[Forced Perspective](https://en.wikipedia.org/wiki/Forced_perspective)** 를 구현한 마인크래프트 데이터팩입니다.
 
 ## 주요 기능
 

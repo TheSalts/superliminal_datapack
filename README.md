@@ -1,6 +1,6 @@
 # Superliminal Datapack (Forced Perspective)
 
-[한국어 README](README-KR.md)
+[한국어 README (KO-KR)](README-KR.md)
 
 This is the **Superliminal Datapack**, a Minecraft datapack inspired by the core mechanic of the Steam game _[Superliminal](https://store.steampowered.com/app/1049410/Superliminal/)_, implementing **Forced Perspective**
 
