@@ -9,18 +9,12 @@ execute as @a[tag=player,scores={leftclicked=2}] at @s run function slm:private/
     execute as @a[tag=player,scores={leftclicked=3..}] at @s run function slm:private/distance/get_distance_3
 
 ## 세팅
-    execute as @e[tag=targetW,type=block_display] run data modify entity @s interpolation_duration set value 1
-    execute as @e[tag=targetW,type=block_display] run data modify entity @s teleport_duration set value 1
+    execute as @e[tag=targetW,type=block_display] run data merge entity @s {interpolation_duration:1,teleport_duration:1}
     execute as @e[tag=collision_shulker,type=shulker] run attribute @s max_health base set 100000
     ## 중력
-        execute as @e[tag=target,tag=!targetW,type=block_display] unless score @s hitbox.gravity matches 0..1 run scoreboard players add @s hitbox.gravity 0
-        execute as @e[tag=target,tag=!targetW,type=block_display,scores={hitbox.gravity=0}] at @s run function slm:private/gravity/gravity
-        execute as @e[tag=targetW,type=block_display] at @s run scoreboard players set @s hitbox.gravity 0
-        execute as @e[tag=target,tag=small.target,type=block_display,scores={hitbox.gravity=1}] at @s as @n[tag=collsion_shulker,tag=small] run tag @s remove shulker.gravity
-        execute as @e[tag=target,tag=!small.target,type=block_display,scores={hitbox.gravity=1}] at @s as @e[tag=collsion_shulker,limit=8,sort=nearest] run tag @s remove shulker.gravity
+        execute as @e[tag=target,type=block_display] at @s run function slm:_internal/tick.1
+        execute as @e[tag=targetW,type=block_display] run data modify entity @s Glowing set value true
 
-    execute as @e[tag=targetW,type=block_display] run data modify entity @s Glowing set value true
-    execute as @e[tag=target,tag=!targetW,type=block_display] run data modify entity @s Glowing set value false
 
 # function slm:world/world_tick
 

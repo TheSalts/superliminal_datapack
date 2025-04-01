@@ -1,3 +1,5 @@
+execute if score $distance hitbox.temp matches 21 as @e[tag=targetW,type=block_display] at @s if entity @n[tag=has_hitbox,distance=..9.5,tag=!targetInteraction,tag=!targetW]
+
 ## calc_size
 
 execute store result score $distance hitbox.temp run data get storage slm:temp/calc_ray_distance distance 1

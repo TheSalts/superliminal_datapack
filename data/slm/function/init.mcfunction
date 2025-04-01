@@ -17,7 +17,6 @@ scoreboard players add @a[tag=player] raycast 0
 scoreboard players add @a leftclicked 0
 scoreboard players add @a rightclicked 0
 scoreboard players set zero const 0
-summon marker ~ ~ ~ {UUID: [I; 0, 0, 0, 0]}
 scoreboard objectives add size.min dummy
 scoreboard objectives add shulker.size.min dummy
 scoreboard objectives add gravity_acceration dummy
