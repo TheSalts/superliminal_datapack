@@ -24,6 +24,14 @@
 
 [gibbsly/gm](https://github.com/gibbsly/gm)
 
+## 제거
+
+```mcfunction
+/function slm:uninstall
+```
+
+를 사용하고 `datapacks` 폴더에서 `SLM`과 `gm`을 삭제하세요.
+
 ## 라이선스
 
 이 프로젝트는 [MIT 라이선스](LICENSE)에 따라 라이선스가 부여됩니다.

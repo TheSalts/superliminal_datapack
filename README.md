@@ -26,6 +26,16 @@ This is the **Superliminal Datapack**, a Minecraft datapack inspired by the core
 
 [gibbsly/gm](https://github.com/gibbsly/gm)
 
+## Uninstall
+
+Use
+
+```mcfunction
+/function slm:uninstall
+```
+
+and remove `SLM` & `gm` from `datapacks` folder
+
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
