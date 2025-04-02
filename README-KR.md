@@ -8,6 +8,10 @@
 - **Forced Perspective**: 플레이어의 시점과 상호작용에 따라 블록과 엔티티의 크기를 동적으로 조정하여 착시를 연출합니다.
 - **히트박스 충돌 감지**: 커스텀 블록의 히트박스를 처리합니다. (AABB)
 
+## 쇼케이스
+
+[Youtube](https://youtu.be/0aqticgqvFc?si=7EEKlqR5OXqLKnSs)
+
 ## 설치 방법
 
 1. [Releases](https://github.com/TheSalts/superliminal_datapack/releases)에서 데이터팩 다운로드

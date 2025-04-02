@@ -10,6 +10,10 @@ This is the **Superliminal Datapack**, a Minecraft datapack inspired by the core
 - **Forced Perspective**: Create the illusion of depth by dynamically resizing blocks and entities based on the player's viewpoint and interactions.
 - **Hitbox Collision Detection**: Handles the hitbox of custom blocks using AABB.
 
+## Showcase
+
+[Youtube](https://youtu.be/0aqticgqvFc?si=7EEKlqR5OXqLKnSs)
+
 ## Installation
 
 1. Download the datapack from [Releases](https://github.com/TheSalts/superliminal_datapack/releases).
