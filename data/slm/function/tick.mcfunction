@@ -1,4 +1,5 @@
-execute as @e[tag=player,scores={leftclicked=2}] at @s anchored eyes if block ^ ^ ^ structure_void run scoreboard players add @s leftclicked 1
+# structure void로 되있으면 자동으로 놓아짐
+#execute as @e[tag=player,scores={leftclicked=2}] at @s anchored eyes if block ^ ^ ^ structure_void run scoreboard players add @s leftclicked 1
 
 execute unless entity @a[tag=player,scores={leftclicked=1..2}] run tag @e remove targetW
 execute as @a[tag=player,scores={leftclicked=2}] at @s run function slm:private/distance/block_hitbox_distance
@@ -9,7 +10,6 @@ execute as @a[tag=player,scores={leftclicked=2}] at @s run function slm:private/
     execute as @a[tag=player,scores={leftclicked=3..}] at @s run function slm:private/distance/get_distance_3
 
 ## 세팅
-    execute as @e[tag=targetW,type=block_display] run data merge entity @s {interpolation_duration:1,teleport_duration:1}
     execute as @e[tag=collision_shulker,type=shulker] run attribute @s max_health base set 100000
     ## 중력
         execute as @e[tag=target,type=block_display] at @s run function slm:_internal/tick.1

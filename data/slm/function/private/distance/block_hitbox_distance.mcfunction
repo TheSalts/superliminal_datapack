@@ -1,5 +1,3 @@
-execute if score $distance hitbox.temp matches 21 as @e[tag=targetW,type=block_display] at @s if entity @n[tag=has_hitbox,distance=..9.5,tag=!targetInteraction,tag=!targetW]
-
 ## calc_size
 
 execute store result score $distance hitbox.temp run data get storage slm:temp/calc_ray_distance distance 1
@@ -29,12 +27,20 @@ data modify storage slm:temp/calc_ray y set value 0.1f
 function gm:subtract with storage slm:temp/calc_ray
 data modify storage slm:temp/calc_ray_distance distance set from storage gm:io out
 
+execute store result score #before_distance raycast run data get storage slm:ray_distance distance 100000
+
 data modify storage slm:ray_distance distance set from storage slm:temp/calc_ray_distance distance
 function slm:private/catch/catch with storage slm:ray_distance
 scoreboard players set $box hitbox.temp 0
 scoreboard players set $set hitbox.temp 0
 data modify storage slm:temp/calc_ray_distance distance set value 0
 
+### check if distance does not changed (for interpolation)
+    execute store result score #after_distance raycast run data get storage slm:ray_distance distance 100000
+    execute if score #before_distance raycast = #after_distance raycast run return 1
+
 ## resize
 
 execute unless function slm:private/distance/check_too_small run function slm:private/resize/resize_target
+
+data modify entity @n[tag=targetW,type=block_display] start_interpolation set value 0
