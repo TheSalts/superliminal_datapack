@@ -9,10 +9,12 @@
         execute store result score @s AABB.max.x as @n[tag=AABB_max,type=marker] run data get entity @s Pos[0] 1000000
         execute store result score @s AABB.max.y as @n[tag=AABB_max,type=marker] run data get entity @s Pos[1] 1000000
         execute store result score @s AABB.max.z as @n[tag=AABB_max,type=marker] run data get entity @s Pos[2] 1000000
+        tag @s add temp.gravity
         kill @e[tag=AABB.gravity,type=marker]
 
-    execute as @e[tag=target,tag=!target.gravity,tag=AABB_check,type=block_display] at @s run function slm:private/collision/calc_aabb
+    execute as @e[tag=target,tag=!temp.gravity,tag=AABB_check,type=block_display] at @s run function slm:private/collision/calc_aabb
     scoreboard players set @s hitbox.gravity 0
+    tag @s remove temp.gravity
     execute if score $AABB hitbox.gravity matches 1 run scoreboard players set @s hitbox.gravity 1
 
 

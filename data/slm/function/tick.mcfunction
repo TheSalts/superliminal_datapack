@@ -1,6 +1,9 @@
 # structure void로 되있으면 자동으로 놓아짐
 #execute as @e[tag=player,scores={leftclicked=2}] at @s anchored eyes if block ^ ^ ^ structure_void run scoreboard players add @s leftclicked 1
 
+tag @e[tag=target,type=block_display] add AABB_check
+tag @e[tag=targetW,type=block_display] remove AABB_check
+
 execute unless entity @a[tag=player,scores={leftclicked=1..2}] run tag @e remove targetW
 execute as @a[tag=player,scores={leftclicked=2}] at @s run function slm:private/distance/block_hitbox_distance
 
