@@ -34,7 +34,7 @@
 /function slm:uninstall
 ```
 
-를 사용하고 `datapacks` 폴더에서 `SLM`과 `gm`을 삭제하세요.
+를 사용하고 `datapacks` 폴더에서 데이터팩을 삭제하세요.
 
 ## 라이선스
 

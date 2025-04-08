@@ -38,7 +38,7 @@ Use
 /function slm:uninstall
 ```
 
-and remove `SLM` & `gm` from `datapacks` folder
+and remove datapack from `datapacks` folder
 
 ## License
 
