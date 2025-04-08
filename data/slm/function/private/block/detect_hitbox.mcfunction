@@ -1,4 +1,5 @@
 # entity
+    scoreboard players reset @s isGravityOnGround
     scoreboard players set @s hitbox.gravity 0
     # get AABB
         $summon marker ~-$(sizeX) ~-$(sizeY) ~-$(sizeZ) {Tags:["AABB_min","AABB.gravity"]}
@@ -16,7 +17,9 @@
     scoreboard players set @s hitbox.gravity 0
     tag @s remove temp.gravity
     execute if score $AABB hitbox.gravity matches 1 run scoreboard players set @s hitbox.gravity 1
+    execute if score $AABB hitbox.gravity matches 1 run scoreboard players set @s isGravityOnGround 0
 
 
 # block
     $execute if score @s hitbox.gravity matches 0 unless blocks ~-$(sizeX) ~-$(sizeY) ~-$(sizeZ) ~$(sizeX) ~$(sizeY) ~$(sizeZ) 0 255 0 masked run scoreboard players set @s hitbox.gravity 1
+    execute if score $AABB hitbox.gravity matches 1 run scoreboard players set @s isGravityOnGround 1

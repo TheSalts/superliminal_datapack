@@ -1,6 +1,4 @@
 {
   "replace": false,
-  "values": [
-    "slm:init"
-  ]
+  "values": ["slm:init", "gm:zzz/load"]
 }
