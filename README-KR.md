@@ -14,9 +14,9 @@
 
 ## 설치 방법
 
-1. [Releases](https://github.com/TheSalts/superliminal_datapack/releases)에서 데이터팩 다운로드
-2. `SLM` 폴더와 `gm`을 마인크래프트 월드 저장소의 `datapacks` 폴더로 이동
-3. 월드를 시작하거나 리로드하여 데이터팩 활성화
+1. `Code -> Download ZIP` 에서 데이터팩 다운로드
+2. 다운받은 파일을 마인크래프트 월드 폴더의 `datapacks` 폴더로 이동
+3. 월드를 시작하거나 `/reload`하여 데이터팩 활성화
 
 ## 사용 방법
 

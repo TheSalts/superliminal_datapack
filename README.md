@@ -16,9 +16,9 @@ This is the **Superliminal Datapack**, a Minecraft datapack inspired by the core
 
 ## Installation
 
-1. Download the datapack from [Releases](https://github.com/TheSalts/superliminal_datapack/releases).
-2. Place the `SLM` folder and `gm` into the `datapacks` directory of your Minecraft world save.
-3. Start or reload the world to activate the datapack.
+1. Download the datapack from `Code -> Download ZIP`
+2. Place the downloaded file into the `datapacks` directory of your Minecraft world save.
+3. Start or `/reload` the world to activate the datapack.
 
 ## How to use
 
