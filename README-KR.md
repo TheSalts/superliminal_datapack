@@ -24,7 +24,7 @@
 2. `/function slm:private/setting/create_block` 명령어로 커스텀 블록을 소환하여 좌클릭으로 움직일 수 있습니다.
 3. 커스텀 블록을 없애려면 아무 종류의 검을 들고 블록을 좌클릭하세요.
 
-## 의존성 (릴리스에 포함됨)
+## 사용된 라이브러리
 
 [gibbsly/gm](https://github.com/gibbsly/gm)
 

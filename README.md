@@ -26,7 +26,7 @@ This is the **Superliminal Datapack**, a Minecraft datapack inspired by the core
 2. Use `/function slm:private/setting/create_block` to summon a block.
 3. To remove a block, hold any sword and left-click on it.
 
-## Dependncies (Included in Releases)
+## Used Library
 
 [gibbsly/gm](https://github.com/gibbsly/gm)
 
