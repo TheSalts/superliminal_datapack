@@ -35,6 +35,3 @@ tag @e[tag=ratioCalc,limit=1,type=item_display] add init.temp
 kill @e[tag=!init.temp,tag=distanceCalc,type=item_display]
 kill @e[tag=!init.temp,tag=ratioCalc,type=item_display]
 tag @e remove init.temp
-
-
-# function slm:world/world_init

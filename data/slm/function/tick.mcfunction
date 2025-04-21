@@ -15,10 +15,10 @@ execute as @a[tag=player,scores={leftclicked=2}] at @s run function slm:private/
 ## 세팅
     execute as @e[tag=collision_shulker,type=shulker] run attribute @s max_health base set 100000
     ## 중력
-        execute as @e[tag=target,type=block_display] at @s run function slm:_internal/tick.1
+        execute as @e[tag=target,type=block_display] at @s run function slm:_internal/tick
         execute as @e[tag=targetW,type=block_display] run data modify entity @s Glowing set value true
 
 
-# function slm:world/world_tick
+function slm:world/tick
 
 # execute as @e[tag=targetW,type=block_display] at @s run scoreboard players set @e[tag=target,tag=!targetW,type=block_display,distance=..10,scores={hitbox.gravity=1}] hitbox.gravity 0

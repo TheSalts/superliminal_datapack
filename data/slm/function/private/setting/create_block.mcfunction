@@ -1,4 +1,4 @@
-summon block_display ~ ~.5 ~ {block_state: {Name: "stone"}, Tags: ["target", "temp"]}
+$summon block_display ~ ~.5 ~ {block_state: {Name: "$(block)"}, Tags: ["target", "temp"]}
 execute as @e[tag=temp,tag=target,type=block_display] run data merge entity @s {transformation: {translation: [-0.5f, -0.5f, -0.5f]}, teleport_duration: 1, interpolation_duration:1}
 summon interaction ~ ~ ~ {width: 1f, height: 0.5f, Tags: ["upperInteraction", "interaction", "temp"]}
 summon interaction ~ ~ ~ {width: 1f, height: -0.5f, Tags: ["lowerInteraction", "interaction", "temp"]}
