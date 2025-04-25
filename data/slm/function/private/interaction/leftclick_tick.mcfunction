@@ -1,3 +1,5 @@
+execute on attacker unless entity @s[tag=player] run function slm:private/error/no_permission {msg: "/tag @s add player를 실행하십시오."}
+execute if data entity @s attack on attacker unless entity @s[tag=player] run return run data remove entity @s attack
 execute on attacker run scoreboard players add @s leftclicked 1
 execute if data entity @s attack run tag @s[tag=!targetInteraction,tag=!clickDetect] add targetInteraction
 

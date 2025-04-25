@@ -1,0 +1,3 @@
+execute align xyz run summon block_display ~0.5 ~ ~0.5 {block_state:{Name:"light_weighted_pressure_plate"}, Tags:["plate","normal","temp"]}
+execute as @e[tag=temp,tag=plate,type=block_display] run data modify entity @s transformation.translation set value [-0.5f, 0f, -0.5f]
+tag @e[tag=temp,tag=plate,type=block_display] remove temp

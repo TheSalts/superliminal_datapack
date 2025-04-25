@@ -1,6 +1,8 @@
 # structure void로 되있으면 자동으로 놓아짐
 #execute as @e[tag=player,scores={leftclicked=2}] at @s anchored eyes if block ^ ^ ^ structure_void run scoreboard players add @s leftclicked 1
 
+tag @e[tag=interaction,tag=!targetInteraction,type=interaction] add can_plate
+tag @e[tag=targetInteraction,type=interaction] remove can_plate
 tag @e[tag=target,type=block_display] add AABB_check
 tag @e[tag=targetW,type=block_display] remove AABB_check
 
@@ -18,6 +20,8 @@ execute as @a[tag=player,scores={leftclicked=2}] at @s run function slm:private/
         execute as @e[tag=target,type=block_display] at @s run function slm:_internal/_tick
         execute as @e[tag=targetW,type=block_display] run data modify entity @s Glowing set value true
 
+    execute as @e[tag=plate,tag=normal,tag=!pressed,type=block_display] at @s if entity @e[tag=can_plate,distance=...7] run function slm:private/plate/press
+    execute as @e[tag=plate,tag=normal,tag=pressed,type=block_display] at @s unless entity @e[tag=can_plate,distance=...7] run function slm:private/plate/unpress
 
 function slm:world/tick
 
