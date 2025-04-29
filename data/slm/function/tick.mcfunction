@@ -25,7 +25,6 @@ execute as @a[tag=player,scores={leftclicked=2}] at @s run function slm:private/
         execute as @e[tag=targetW,type=block_display] run data modify entity @s Glowing set value true
 
 
-
 execute as @e[tag=plate,type=block_display] at @s run function slm:private/collision/calc_aabb_plate
 tag @e[tag=temp.plate.AABB,type=block_display] remove temp.plate.AABB
 execute as @e[tag=plate,tag=normal,tag=!pressed,type=block_display] at @s if entity @e[tag=can_plate,distance=...7] run scoreboard players set @s var 1
@@ -37,5 +36,3 @@ execute as @e[tag=plate,tag=normal,tag=!pressed,type=block_display] if score @s 
 
 
 function slm:world/tick
-
-
