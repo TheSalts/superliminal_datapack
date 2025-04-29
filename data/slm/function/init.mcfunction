@@ -29,6 +29,7 @@ scoreboard objectives add AABB.max.y dummy
 scoreboard objectives add AABB.max.z dummy
 scoreboard objectives add var dummy
 scoreboard objectives add isGravityOnGround dummy
+scoreboard objectives add cache dummy
 
 tag @e[tag=distanceCalc,limit=1,type=item_display] add init.temp
 tag @e[tag=ratioCalc,limit=1,type=item_display] add init.temp
