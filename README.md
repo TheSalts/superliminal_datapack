@@ -23,7 +23,7 @@ This is the **Superliminal Datapack**, a Minecraft datapack inspired by the core
 ## How to use
 
 1. Only one player should have the `player` tag. Use `/tag @s add player`
-2. Use `/function slm:private/setting/create_block` to summon a block.
+2. Use `/function slm:setting/create_block` to summon a block.
 3. To remove a block, hold any sword and left-click on it.
 
 ## Used Library

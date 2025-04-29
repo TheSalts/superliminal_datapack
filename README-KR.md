@@ -21,7 +21,7 @@
 ## 사용 방법
 
 1. `/tag @s add player` \* 멀티 서버의 경우 player 태그는 한 명만 가지고 있어야 합니다.
-2. `/function slm:private/setting/create_block` 명령어로 커스텀 블록을 소환하여 좌클릭으로 움직일 수 있습니다.
+2. `/function slm:setting/create_block` 명령어로 커스텀 블록을 소환하여 좌클릭으로 움직일 수 있습니다.
 3. 커스텀 블록을 없애려면 아무 종류의 검을 들고 블록을 좌클릭하세요.
 
 ## 사용된 라이브러리
