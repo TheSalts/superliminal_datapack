@@ -1,4 +1,3 @@
-scoreboard players set $AABB hitbox.gravity 0
 execute \ 
 if score @s AABB.min.x <= @n[tag=temp.gravity,type=block_display] AABB.max.x \
 if score @s AABB.max.x >= @n[tag=temp.gravity,type=block_display] AABB.min.x \

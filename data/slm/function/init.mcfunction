@@ -29,10 +29,11 @@ scoreboard objectives add AABB.max.y dummy
 scoreboard objectives add AABB.max.z dummy
 scoreboard objectives add var dummy
 scoreboard objectives add isGravityOnGround dummy
-scoreboard objectives add cache dummy
 
 tag @e[tag=distanceCalc,limit=1,type=item_display] add init.temp
 tag @e[tag=ratioCalc,limit=1,type=item_display] add init.temp
 kill @e[tag=!init.temp,tag=distanceCalc,type=item_display]
 kill @e[tag=!init.temp,tag=ratioCalc,type=item_display]
 tag @e remove init.temp
+
+function slm:world/init/init
