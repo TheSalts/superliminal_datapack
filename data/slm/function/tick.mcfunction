@@ -39,7 +39,7 @@ execute as @e[tag=interaction,type=interaction] if data entity @s interaction ru
 
     # 무게 발판
         execute as @e[tag=plate,tag=weight,tag=pressed,type=block_display] if score @s var matches 0 at @s run function slm:private/plate/unpress
-        execute as @e[tag=hit,type=block_display] store result score @s size.min run data get entity @s transformation.scale[0]
+        execute as @e[tag=target,type=block_display] at @s store result score @s size.min run data get entity @s transformation.scale[0]
         execute as @e[tag=plate,tag=weight,tag=pressed,type=block_display] if score @s var matches 1.. at @s unless score @n[tag=hit,type=block_display] size.min matches 3.. run function slm:private/plate/unpress
         execute as @e[tag=plate,tag=weight,tag=!pressed,type=block_display] if score @s var matches 1.. at @s if score @n[tag=hit,type=block_display] size.min matches 3.. run function slm:private/plate/press
 
