@@ -1,5 +1,6 @@
 # structure void로 되있으면 자동으로 놓아짐
     execute as @e[tag=player,scores={leftclicked=2}] at @s anchored eyes if block ^ ^ ^ structure_void run scoreboard players add @s leftclicked 1
+    execute as @e[tag=player,scores={leftclicked=2}] at @s anchored eyes if block ^ ^ ^ #doors run scoreboard players add @s leftclicked 1
 
 # check if player is more than 2
     scoreboard players set $playerCount var 0
