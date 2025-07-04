@@ -4,11 +4,31 @@
 
 This is the **Superliminal Datapack**, a Minecraft datapack inspired by the core mechanic of the Steam game _[Superliminal](https://store.steampowered.com/app/1049410/Superliminal/)_, implementing **Forced Perspective**
 
-## Features
+## Technical Implementation Method
 
-- **Gravity Simulation**: Apply gravity to entities and blocks with adjustable acceleration.
-- **Forced Perspective**: Create the illusion of depth by dynamically resizing blocks and entities based on the player's viewpoint and interactions.
-- **Hitbox Collision Detection**: Handles the hitbox of custom blocks using AABB.
+The technical implementation of Forced Perspective can be broadly divided into two parts.
+
+***
+
+### 1. Grabbing/Placing the Block
+
+Summon a block display with passenger interaction.
+
+When this interaction is clicked, raycasting begins. With each step of the raycast, the block's size is adjusted, and then it is checked to see if the block has hit a wall.
+
+***
+
+### 2. Resizing the Block
+
+When the player clicks the interaction, the distance between the player and the block, as well as the block's size, are saved. Let's call this distance $d$ and the size $s$.
+
+During each step of the raycast, the block's position moves slightly backward from the player's point of view. The new distance between the player and the block after it has moved is saved. Let's call this $d_c$.
+
+To determine the block's new size, you first need to find the size ratio $r$. The formula to find it is as follows:
+
+$$r = \frac{d_c}{d}$$
+
+Now, by multiplying the size ratio $r$ by the original size $s$, you get the adjusted block size.
 
 ## Showcase
 
