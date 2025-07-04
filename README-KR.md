@@ -2,7 +2,7 @@
 
 이 데이터팩은 Steam 게임 _[Superliminal](https://store.steampowered.com/app/1049410/Superliminal/?l=koreana)_ 의 핵심 메커니즘인 **[Forced Perspective](https://en.wikipedia.org/wiki/Forced_perspective)** 를 구현한 마인크래프트 데이터팩입니다.
 
-## 기술 구현
+## 기술 구현 방식
 
 인위적 원근법 (Forced Perspective)의 기술 구현은 크게 2가지로 나눌 수 있습니다.
 
