@@ -30,6 +30,8 @@ $$r = \frac{d_c}{d}$$
 
 Now, by multiplying the size ratio $r$ by the original size $s$, you get the adjusted block size.
 
+***
+
 ## Showcase
 
 [Youtube](https://youtu.be/0aqticgqvFc?si=7EEKlqR5OXqLKnSs)
