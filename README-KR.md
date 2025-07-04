@@ -28,6 +28,8 @@ $$r = \frac{d_c}{d}$$
 
 이제 크기 비율 $r$을 원래 크기 $s$에 곱하면 보정된 블록 크기가 됩니다.
 
+***
+
 ## 쇼케이스
 
 [Youtube](https://youtu.be/0aqticgqvFc?si=7EEKlqR5OXqLKnSs)
