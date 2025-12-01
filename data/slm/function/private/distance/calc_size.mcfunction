@@ -1,4 +1,4 @@
-execute store result score $distance hitbox.temp run data get storage slm:temp/calc_ray_distance distance 1
+execute store result score #distance hitbox.temp run data get storage slm:temp/calc_ray_distance distance 1
 
 data modify storage slm:ratio_input b set from storage slm:temp/calc_ray_distance distance
 

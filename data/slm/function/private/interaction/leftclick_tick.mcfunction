@@ -1,8 +1,8 @@
-execute on vehicle at @s unless score @s level = @p[tag=player] level run scoreboard players set $cancel_click var 1
+execute on vehicle at @s unless score @s level = @p[tag=player] level run scoreboard players set #cancel_click var 1
 execute on attacker unless entity @s[tag=player] run function slm:private/error/no_permission {msg: "/tag @s add player를 실행하십시오."}
 
-execute if score $cancel_click var matches 1 run data remove entity @s attack
-execute if score $cancel_click var matches 1 run scoreboard players set $cancel_click var 0
+execute if score #cancel_click var matches 1 run data remove entity @s attack
+execute if score #cancel_click var matches 1 run scoreboard players set #cancel_click var 0
 execute unless data entity @s attack run return fail
 
 execute on attacker run scoreboard players add @s leftclicked 1

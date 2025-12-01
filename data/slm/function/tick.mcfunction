@@ -3,10 +3,10 @@
     execute as @e[tag=player,scores={leftclicked=2}] at @s anchored eyes if block ^ ^ ^ #doors run scoreboard players add @s leftclicked 1
 
 # check if player is more than 2
-    scoreboard players set $playerCount var 0
-    execute as @a[tag=player] run scoreboard players add $playerCount var 1
-    execute unless score $lastPlayerCount var = $playerCount var if score $playerCount var matches 2.. run function slm:private/error/too_many_players
-    execute store result score $lastPlayerCount var run scoreboard players get $playerCount var
+    scoreboard players set #playerCount var 0
+    execute as @a[tag=player] run scoreboard players add #playerCount var 1
+    execute unless score #lastPlayerCount var = #playerCount var if score #playerCount var matches 2.. run function slm:private/error/too_many_players
+    execute store result score #lastPlayerCount var run scoreboard players get #playerCount var
 
 tag @e[tag=target,type=block_display] add AABB_check
 tag @e[tag=targetW,type=block_display] remove AABB_check
@@ -50,4 +50,4 @@ execute as @e[tag=interaction,type=interaction] if data entity @s interaction ru
         execute as @e[tag=plate,tag=height,tag=!pressed,type=block_display] if score @s var matches 1.. at @s if score @n[tag=hit,type=block_display] gravity_acceration matches 10 run function slm:private/plate/press
 
 
-function slm:world/tick
+# function slm:world/tick

@@ -3,4 +3,4 @@ execute unless entity @s[tag=small.target] run function slm:private/collision/mo
 scoreboard players set @s gravity_acceration 0
 function slm:private/collision/set_aabb
 tag @s remove target.gravity
-scoreboard players set $adjust hitbox.gravity 0
+scoreboard players set #adjust hitbox.gravity 0

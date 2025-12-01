@@ -1,6 +1,6 @@
 ## calc_size
 
-execute store result score $distance hitbox.temp run data get storage slm:temp/calc_ray_distance distance 1
+execute store result score #distance hitbox.temp run data get storage slm:temp/calc_ray_distance distance 1
 
 data modify storage slm:ratio_input b set from storage slm:temp/calc_ray_distance distance
 
@@ -16,9 +16,9 @@ data modify storage slm:temp/distance_calc distance set from storage slm:temp/ca
 ## loop
 
 function slm:private/block/calc_hitbox with storage slm:temp/distance_calc
-execute if score $box hitbox.temp matches 1 if score $set hitbox.temp matches 0 if score $distance hitbox.temp matches ..20 run return run function slm:private/block/hitbox_0.5
-execute if score $box hitbox.temp matches 1 if score $set hitbox.temp matches 1 if score $distance hitbox.temp matches ..20 run return run function slm:private/block/hitbox_0.1
-execute if score $set hitbox.temp matches 0 run return run function slm:private/block/set0
+execute if score #box hitbox.temp matches 1 if score #set hitbox.temp matches 0 if score #distance hitbox.temp matches ..20 run return run function slm:private/block/hitbox_0.5
+execute if score #box hitbox.temp matches 1 if score #set hitbox.temp matches 1 if score #distance hitbox.temp matches ..20 run return run function slm:private/block/hitbox_0.1
+execute if score #set hitbox.temp matches 0 run return run function slm:private/block/set0
 
 ## catch
 
@@ -31,8 +31,8 @@ execute store result score #before_distance raycast run data get storage slm:ray
 
 data modify storage slm:ray_distance distance set from storage slm:temp/calc_ray_distance distance
 function slm:private/catch/catch with storage slm:ray_distance
-scoreboard players set $box hitbox.temp 0
-scoreboard players set $set hitbox.temp 0
+scoreboard players set #box hitbox.temp 0
+scoreboard players set #set hitbox.temp 0
 data modify storage slm:temp/calc_ray_distance distance set value 0
 
 ### check if distance does not changed (for interpolation)
