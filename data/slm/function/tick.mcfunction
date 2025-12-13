@@ -53,4 +53,13 @@ execute as @e[tag=interaction,type=interaction] if data entity @s interaction ru
 ## 벽
     execute if entity @e[tag=targetW,type=block_display] run tag @e[tag=wall,type=block_display] remove open
     execute unless entity @e[tag=targetW,type=block_display] run tag @e[tag=wall,type=block_display] add open
-    execute as @a[tag=player] at @s if entity @e[tag=wall,tag=open,type=block_display,distance=..7] run function slm:private/wall/detect
+    execute as @e[tag=wall,tag=!open,type=block_display] if data entity @s {block_state:{Name: "minecraft:lime_stained_glass"}} run data modify entity @s block_state set value {Name:"tinted_glass"}
+    execute as @e[tag=wall,tag=open,type=block_display] if data entity @s {block_state:{Name: "minecraft:tinted_glass"}} run data modify entity @s block_state set value {Name:"lime_stained_glass"}
+    execute as @e[tag=wall,tag=!open,type=block_display] at @s run fill ~ ~ ~ ~ ~ ~ barrier replace air
+    execute as @e[tag=wall,tag=open,type=block_display] at @s run fill ~ ~ ~ ~ ~ ~ air replace barrier
+    execute as @a[tag=player] at @s if entity @e[tag=wall,tag=open,type=block_display,distance=..7] as @e[tag=wall,tag=open,type=block_display] at @s run function slm:private/wall/detect
+
+
+
+# fix placing shulker (https://discord.com/channels/154777837382008833/157097006500806656/1402253905408163842)
+    execute as @e[tag=collision,type=block_display] store success entity @s OnGround byte 1 store success score @s var unless score @s var matches 1
