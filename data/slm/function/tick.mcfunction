@@ -50,4 +50,7 @@ execute as @e[tag=interaction,type=interaction] if data entity @s interaction ru
         execute as @e[tag=plate,tag=height,tag=!pressed,type=block_display] if score @s var matches 1.. at @s if score @n[tag=hit,type=block_display] gravity_acceration matches 10 run function slm:private/plate/press
 
 
-# function slm:world/tick
+## 벽
+    execute if entity @e[tag=targetW,type=block_display] run tag @e[tag=wall,type=block_display] remove open
+    execute unless entity @e[tag=targetW,type=block_display] run tag @e[tag=wall,type=block_display] add open
+    execute as @a[tag=player] at @s if entity @e[tag=wall,tag=open,type=block_display,distance=..7] run function slm:private/wall/detect
