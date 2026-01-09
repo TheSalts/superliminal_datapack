@@ -1,0 +1,9 @@
+{
+    "rules": {
+        "disabled": []
+    },
+    "executeGroup": {
+        "outputPath": "{root}/_internal/private/{subdir}",
+        "outputName": "{name}_{line}"
+    }
+}

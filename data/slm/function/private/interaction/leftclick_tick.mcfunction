@@ -8,8 +8,8 @@ execute unless data entity @s attack run return fail
 execute on attacker run scoreboard players add @s leftclicked 1
 execute if data entity @s attack run tag @s[tag=!targetInteraction,tag=!clickDetect] add targetInteraction
 
-execute as @e[tag=targetInteraction,type=interaction] at @s if data entity @s attack run function slm:_internal/private/interaction/_leftclick_tick
-scoreboard players set @n[tag=targetW,tag=target.gravity,type=block_display] gravity_acceration 0
+execute as @e[tag=targetInteraction,distance=0..,type=interaction] at @s if data entity @s attack run function slm:_internal/private/interaction/_leftclick_tick
+scoreboard players set @n[tag=targetW,tag=target.gravity,distance=0..,type=block_display] gravity_acceration 0
 # 개발자용 ( 칼 들고 때리면 죽음 )
     execute at @s on attacker if items entity @s weapon.mainhand #swords run return run function slm:private/setting/kill_block
 

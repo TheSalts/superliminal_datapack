@@ -4,7 +4,7 @@ execute store result score #distance hitbox.temp run data get storage slm:temp/c
 
 data modify storage slm:ratio_input b set from storage slm:temp/calc_ray_distance distance
 
-execute as @e[tag=ratioCalc,type=item_display] run function slm:private/math/ratio with storage slm:ratio_input
+execute as @e[tag=ratioCalc,distance=0..,type=item_display] run function slm:private/math/ratio with storage slm:ratio_input
 
 function slm:private/math/multiply_scale
 
@@ -43,4 +43,4 @@ data modify storage slm:temp/calc_ray_distance distance set value 0
 
 execute unless function slm:private/distance/check_too_small run function slm:private/resize/resize_target
 
-data modify entity @n[tag=targetW,type=block_display] start_interpolation set value 0
+data modify entity @n[tag=targetW,distance=0..,type=block_display] start_interpolation set value 0

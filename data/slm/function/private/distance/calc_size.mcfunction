@@ -2,7 +2,7 @@ execute store result score #distance hitbox.temp run data get storage slm:temp/c
 
 data modify storage slm:ratio_input b set from storage slm:temp/calc_ray_distance distance
 
-execute as @e[tag=ratioCalc,type=item_display] run function slm:private/math/ratio with storage slm:ratio_input
+execute as @e[tag=ratioCalc,distance=0..,type=item_display] run function slm:private/math/ratio with storage slm:ratio_input
 
 function slm:private/math/multiply_scale
 

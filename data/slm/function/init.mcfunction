@@ -1,6 +1,6 @@
 forceload add 0 0
-execute unless entity @e[tag=distanceCalc,type=item_display] run summon item_display 0 0 0 {Tags: ["distanceCalc"]}
-execute unless entity @e[tag=ratioCalc,type=item_display] run summon item_display 0 0 0 {Tags: ["ratioCalc"]}
+execute unless entity @e[tag=distanceCalc,distance=0..,type=item_display] run summon item_display 0 0 0 {Tags: ["distanceCalc"]}
+execute unless entity @e[tag=ratioCalc,distance=0..,type=item_display] run summon item_display 0 0 0 {Tags: ["ratioCalc"]}
 scoreboard objectives add math.plus dummy
 scoreboard objectives add math.minus dummy
 scoreboard objectives add math.int dummy
@@ -31,10 +31,10 @@ scoreboard objectives add var dummy
 scoreboard objectives add isGravityOnGround dummy
 scoreboard objectives add wall dummy
 
-tag @e[tag=distanceCalc,limit=1,type=item_display] add init.temp
-tag @e[tag=ratioCalc,limit=1,type=item_display] add init.temp
-kill @e[tag=!init.temp,tag=distanceCalc,type=item_display]
-kill @e[tag=!init.temp,tag=ratioCalc,type=item_display]
+tag @e[tag=distanceCalc,limit=1,distance=0..,type=item_display] add init.temp
+tag @e[tag=ratioCalc,limit=1,distance=0..,type=item_display] add init.temp
+kill @e[tag=!init.temp,tag=distanceCalc,distance=0..,type=item_display]
+kill @e[tag=!init.temp,tag=ratioCalc,distance=0..,type=item_display]
 tag @e remove init.temp
 
 # function slm:world/init/init

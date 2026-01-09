@@ -24,12 +24,12 @@ scoreboard objectives remove AABB.min.z
 scoreboard objectives remove AABB.max.x 
 scoreboard objectives remove AABB.max.y 
 scoreboard objectives remove AABB.max.z 
-kill @e[tag=ratioCalc]
-kill @e[tag=distanceCalc]
+kill @e[tag=ratioCalc,distance=0..]
+kill @e[tag=distanceCalc,distance=0..]
 forceload remove 0 0
-kill @e[tag=target]
-kill @e[tag=interaction]
-kill @e[tag=AABB_max]
-kill @e[tag=AABB_min]
-kill @e[tag=collision_shulker]
-kill @e[tag=collision]
+kill @e[tag=target,distance=0..]
+kill @e[tag=interaction,distance=0..]
+kill @e[tag=AABB_max,distance=0..]
+kill @e[tag=AABB_min,distance=0..]
+kill @e[tag=collision_shulker,distance=0..]
+kill @e[tag=collision,distance=0..]
