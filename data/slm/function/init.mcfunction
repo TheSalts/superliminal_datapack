@@ -37,4 +37,4 @@ kill @e[tag=!init.temp,tag=distanceCalc,distance=0..,type=item_display]
 kill @e[tag=!init.temp,tag=ratioCalc,distance=0..,type=item_display]
 tag @e remove init.temp
 
-# function slm:world/init/init
+function slm:world/init/init

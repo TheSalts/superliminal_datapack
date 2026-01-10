@@ -1,6 +1,6 @@
 # structure void로 되있으면 자동으로 놓아짐
-    execute as @e[tag=player,scores={leftclicked=2},distance=0..] at @s anchored eyes if block ^ ^ ^ structure_void run scoreboard players add @s leftclicked 1
-    execute as @e[tag=player,scores={leftclicked=2},distance=0..] at @s anchored eyes if block ^ ^ ^ #doors run scoreboard players add @s leftclicked 1
+    execute as @a[tag=player,scores={leftclicked=2},distance=0..] at @s anchored eyes if block ^ ^ ^ structure_void run scoreboard players add @s leftclicked 1
+    execute as @a[tag=player,scores={leftclicked=2},distance=0..] at @s anchored eyes if block ^ ^ ^ #doors run scoreboard players add @s leftclicked 1
 
 # check if player is more than 2
     scoreboard players set #playerCount var 0
@@ -63,3 +63,6 @@ execute as @e[tag=interaction,distance=0..,type=interaction] if data entity @s i
 
 # fix placing shulker (https://discord.com/channels/154777837382008833/157097006500806656/1402253905408163842)
     execute as @e[tag=collision,distance=0..,type=block_display] store success entity @s OnGround byte 1 store success score @s var unless score @s var matches 1
+
+
+function slm:world/tick
