@@ -1,0 +1,6 @@
+kill @e[x=0,tag=target,type=block_display]
+kill @e[x=0,tag=lowerInteraction,type=interaction]
+kill @e[x=0,tag=upperInteraction,type=interaction]
+kill @e[x=0,tag=collision,type=block_display]
+kill @e[x=0,tag=collision_shulker,type=shulker]
+kill @e[x=0,tag=salt_int,type=interaction]

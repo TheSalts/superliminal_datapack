@@ -1,0 +1,1 @@
+data modify storage slm:original_target_scale scale set from storage slm:target_localscale scale

@@ -1,0 +1,10 @@
+summon block_display ~ ~ ~ {Passengers: [{id: "shulker", Silent: true, NoAI: true, Invulnerable: true, PersistenceRequired: true, Tags: ["collision_shulker", "has_hitbox"]}], Tags: ["collision", "sl_shu_xn", "sl_shu_yn", "sl_shu_zn"]}
+summon block_display ~ ~ ~ {Passengers: [{id: "shulker", Silent: true, NoAI: true, Invulnerable: true, PersistenceRequired: true, Tags: ["collision_shulker", "has_hitbox"]}], Tags: ["collision", "sl_shu_xn", "sl_shu_yn", "sl_shu_zp"]}
+summon block_display ~ ~ ~ {Passengers: [{id: "shulker", Silent: true, NoAI: true, Invulnerable: true, PersistenceRequired: true, Tags: ["collision_shulker", "has_hitbox"]}], Tags: ["collision", "sl_shu_xn", "sl_shu_yp", "sl_shu_zn"]}
+summon block_display ~ ~ ~ {Passengers: [{id: "shulker", Silent: true, NoAI: true, Invulnerable: true, PersistenceRequired: true, Tags: ["collision_shulker", "has_hitbox"]}], Tags: ["collision", "sl_shu_xn", "sl_shu_yp", "sl_shu_zp"]}
+summon block_display ~ ~ ~ {Passengers: [{id: "shulker", Silent: true, NoAI: true, Invulnerable: true, PersistenceRequired: true, Tags: ["collision_shulker", "has_hitbox"]}], Tags: ["collision", "sl_shu_xp", "sl_shu_yn", "sl_shu_zn"]}
+summon block_display ~ ~ ~ {Passengers: [{id: "shulker", Silent: true, NoAI: true, Invulnerable: true, PersistenceRequired: true, Tags: ["collision_shulker", "has_hitbox"]}], Tags: ["collision", "sl_shu_xp", "sl_shu_yn", "sl_shu_zp"]}
+summon block_display ~ ~ ~ {Passengers: [{id: "shulker", Silent: true, NoAI: true, Invulnerable: true, PersistenceRequired: true, Tags: ["collision_shulker", "has_hitbox"]}], Tags: ["collision", "sl_shu_xp", "sl_shu_yp", "sl_shu_zn"]}
+summon block_display ~ ~ ~ {Passengers: [{id: "shulker", Silent: true, NoAI: true, Invulnerable: true, PersistenceRequired: true, Tags: ["collision_shulker", "has_hitbox"]}], Tags: ["collision", "sl_shu_xp", "sl_shu_yp", "sl_shu_zp"]}
+execute as @e[tag=collision_shulker,distance=0..,type=shulker] run function slm:_internal/private/collision/_shulker
+function slm:private/collision/move

@@ -1,0 +1,2 @@
+execute as @e[distance=0..,tag=targetW,type=block_display] run function slm:_internal/private/resize/_set_size_to_0.1
+function slm:private/resize/resize_target_interaction
