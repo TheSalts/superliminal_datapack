@@ -14,7 +14,7 @@
         kill @e[tag=AABB.gravity,distance=0..,type=marker]
 
     scoreboard players set #AABB hitbox.gravity 0
-    execute as @e[tag=target,tag=!temp.gravity,tag=AABB_check,distance=0..,type=block_display] at @s run function slm:private/collision/calc_aabb
+    execute as @e[tag=!targetW,tag=target,tag=!temp.gravity,tag=AABB_check,distance=0..,type=block_display] at @s run function slm:private/collision/calc_aabb
     scoreboard players set @s hitbox.gravity 0
     tag @s remove temp.gravity
     execute if score #AABB hitbox.gravity matches 1 run scoreboard players set @s hitbox.gravity 1

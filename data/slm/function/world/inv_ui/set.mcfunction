@@ -21,7 +21,6 @@ execute if score #salt achievement matches 4.. run item replace entity @s contai
 execute if score #chair achievement matches 26.. run item replace entity @s container.31 with minecraft:cherry_stairs[custom_name={"text":"의자왕","color":"light_purple","italic":false},lore=[{"text":"이스터에그","color":"yellow","italic":false},{"text":"모든 의자에 앉으세요","color":"gray","italic":false}]] 1
 execute if score #clear achievement matches 1 run item replace entity @s container.35 with minecraft:enchanted_golden_apple[custom_name={"text":"최고의 플레이","color":"light_purple","italic":false},lore=[{"text":"게임 클리어","color":"yellow","italic":false},{"text":"플레이해주셔서 감사합니다!","color":"gray","italic":false}]] 1
 
-execute if entity @s[tag=end_screen_1] run item replace entity @s armor.head with amethyst_shard[equippable={slot:"head",camera_overlay:"logo",swappable:false},enchantments={binding_curse:1},tooltip_display={hide_tooltip:true}]
-execute if entity @s[tag=end_screen_2] run item replace entity @s armor.head with amethyst_shard[equippable={slot:"head",camera_overlay:"thx",swappable:false},enchantments={binding_curse:1},tooltip_display={hide_tooltip:true}]
+execute if entity @s[tag=end_screen_1] run item replace entity @s armor.head with amethyst_shard[equippable={slot:"head",camera_overlay:"logo",swappable:false,equip_sound:"minecraft:entity.player.big_fall"},enchantments={binding_curse:1},tooltip_display={hide_tooltip:true}]
+execute if entity @s[tag=end_screen_2] run item replace entity @s armor.head with amethyst_shard[equippable={slot:"head",camera_overlay:"thx",swappable:false,equip_sound:"minecraft:entity.player.big_fall"},enchantments={binding_curse:1},tooltip_display={hide_tooltip:true}]
 execute if entity @s[tag=!end_screen_1, tag=!end_screen_2] run item replace entity @s armor.head with air
-stopsound @s * item.armor.equip_generic

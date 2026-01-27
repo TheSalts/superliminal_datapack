@@ -1,7 +1,9 @@
 {
     "pack": {
-        "pack_format": 88,
-        "description": "Superliminal datapack by TheSalt_ (discord: thesalt_)"
+        "pack_format": 94.1,
+        "description": "Superliminal datapack by TheSalt_ (discord: thesalt_)",
+        "min_format": 94.1,
+        "max_format": 94.1
     },
     "filter": {
         "block": [

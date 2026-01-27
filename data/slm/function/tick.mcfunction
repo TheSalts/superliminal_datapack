@@ -27,15 +27,12 @@ execute as @a[tag=player,scores={leftclicked=2}] at @s run function slm:private/
 
 ## 발판
     tag @e[tag=hit,distance=0..,type=block_display] remove hit
-    execute as @e[tag=plate,distance=0..,type=block_display] at @s run tag @e[distance=..3,tag=target,tag=!targetW,type=block_display] add temp.plate.AABB
-    execute as @e[tag=plate,distance=0..,type=block_display] at @s run function slm:private/collision/calc_aabb_plate
-    execute as @e[tag=plate,distance=0..,type=block_display] at @s if score @s var matches 1 run tag @n[tag=temp.plate.AABB,distance=0..,type=block_display] add hit
+    execute as @e[distance=0..,tag=plate,type=block_display] at @s run function slm:_internal/private/tick_32
     tag @e[tag=temp.plate.AABB,distance=0..,type=block_display] remove temp.plate.AABB
-    execute as @e[tag=plate,tag=normal,tag=!pressed,distance=0..,type=block_display] at @s if entity @a[tag=can_plate,distance=...7] run scoreboard players set @s var 2
-    execute as @e[tag=plate,tag=normal,tag=pressed,distance=0..,type=block_display] if score @s var matches 2 at @s unless entity @a[tag=can_plate,distance=...7] run scoreboard players set @s var 0
-    # 일반 발판
-        execute as @e[tag=plate,tag=normal,tag=pressed,distance=0..,type=block_display] if score @s var matches 0 at @s run function slm:private/plate/unpress
-        execute as @e[tag=plate,tag=normal,tag=!pressed,distance=0..,type=block_display] if score @s var matches 1.. at @s run function slm:private/plate/press
+
+# 일반 발판
+    execute as @e[tag=plate,tag=normal,tag=pressed,distance=0..,type=block_display] if score @s var matches 0 at @s run function slm:private/plate/unpress
+    execute as @e[tag=plate,tag=normal,tag=!pressed,distance=0..,type=block_display] if score @s var matches 1.. at @s run function slm:private/plate/press
 
 
 # fix placing shulker (https://discord.com/channels/154777837382008833/157097006500806656/1402253905408163842)

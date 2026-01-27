@@ -1,6 +1,7 @@
 forceload add 0 0
 execute unless entity 00000000-0000-0000-0000-000000000000 run summon item_display 0 0 0 {UUID:[I;0,0,0,0],Tags: ["ratioCalc"]}
 execute unless entity 00000000-0000-0000-0000-000000000001 run summon item_display 0 0 0 {UUID:[I;0,0,0,1],Tags: ["distanceCalc"]}
+execute unless entity 00000000-0000-0000-0000-0000000000ff run summon marker 0 0 0 {Tags:["temp_anchore_marker"], UUID:[I;0,0,0,255]}
 scoreboard objectives add math.plus dummy
 scoreboard objectives add math.minus dummy
 scoreboard objectives add math.int dummy

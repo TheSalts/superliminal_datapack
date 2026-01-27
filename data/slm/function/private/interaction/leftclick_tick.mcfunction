@@ -1,13 +1,10 @@
 # execute on vehicle at @s unless score @s level = @p[tag=player] level run scoreboard players set #cancel_click var 1
 
-execute on attacker unless data entity @s {OnGround:1b} run return fail
-execute on attacker unless entity @s[tag=player] run return run function slm:private/error/no_permission {msg: "/tag @s add player를 실행하십시오."}
-execute on attacker at @s if entity @e[distance=..1.1,tag=wall,tag=open,tag=!close,tag=!close_by_target,type=item_display] run return fail
+execute on attacker run function slm:_internal/private/private/interaction/leftclick_tick_3
 
 execute on vehicle if entity @s[tag=obs,tag=target] run function slm:_internal/private/private/interaction/remove_obsidian
 
-execute if score #cancel_click var matches 1 run data remove entity @s attack
-execute if score #cancel_click var matches 1 run scoreboard players set #cancel_click var 0
+execute if score #cancel_click var matches 1 run function slm:_internal/private/private/interaction/leftclick_tick_7
 execute unless data entity @s attack run return fail
 
 execute on attacker run scoreboard players add @s leftclicked 1

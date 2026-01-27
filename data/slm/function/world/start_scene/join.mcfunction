@@ -1,4 +1,4 @@
-gamerule sendCommandFeedback false
+gamerule send_command_feedback false
 tag @s add player
 gamemode spectator @s
 title @a times 0 0 20
