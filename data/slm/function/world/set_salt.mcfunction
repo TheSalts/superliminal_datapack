@@ -1,2 +1,4 @@
+execute if entity @n[distance=..2,tag=salt_marker,tag=done,type=marker] run return 1
 setblock ~ ~ ~ minecraft:player_head[rotation=0]{custom_name:{"text":"Salt Cellar","color":"gold","underlined":true,"bold":true,"italic":false},profile:{properties:[{name:"textures",value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTk0Y2M3MjVlM2VjNDJkOTc0NjQwNDMxODBiNmEyYTZiNmYwZGU4OGNkZjY0NmM2NDk0NTIwODM2YTQ4YThiNyJ9fX0="}]}}
 summon interaction ~ ~ ~ {Tags:["salt_int"]}
+execute unless entity @n[distance=..2,tag=salt_marker,type=marker] run summon marker ~ ~ ~ {Tags:["salt_marker"]}

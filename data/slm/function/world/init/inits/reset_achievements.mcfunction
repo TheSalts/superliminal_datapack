@@ -3,6 +3,7 @@ scoreboard players set #bucket achievement 0
 scoreboard players set #flower achievement 0
 scoreboard players set #emerald_block achievement 0
 scoreboard players set #pumpkin achievement 0
+tag @e[distance=0..,tag=salt_marker,type=marker] remove done
 scoreboard players set #salt achievement 0
 scoreboard players set #chair achievement 0
 scoreboard players set #clear achievement 0

@@ -3,6 +3,11 @@ execute unless score #bucket achievement matches 1 if items entity @s container.
 execute unless score #flower achievement matches 1 if items entity @s container.* lily_of_the_valley run scoreboard players set #flower achievement 1
 execute unless score #emerald_block achievement matches 1 if items entity @s container.* emerald_block run scoreboard players set #emerald_block achievement 1
 execute unless score #pumpkin achievement matches 1 if items entity @s container.* carved_pumpkin run scoreboard players set #pumpkin achievement 1
+execute unless score #granite achievement matches 1 if items entity @s player.cursor granite run scoreboard players set #granite achievement 1
+execute unless score #bucket achievement matches 1 if items entity @s player.cursor bucket run scoreboard players set #bucket achievement 1
+execute unless score #flower achievement matches 1 if items entity @s player.cursor lily_of_the_valley run scoreboard players set #flower achievement 1
+execute unless score #emerald_block achievement matches 1 if items entity @s player.cursor emerald_block run scoreboard players set #emerald_block achievement 1
+execute unless score #pumpkin achievement matches 1 if items entity @s player.cursor carved_pumpkin run scoreboard players set #pumpkin achievement 1
 clear @a[gamemode=adventure] #adv
 item replace entity @s container.9 with minecraft:gray_dye[custom_name={"text":"미발견","color":"gray","bold":true,"italic":false},lore=[{"text":"이스터에그","color":"yellow","italic":false}, {"text":"01","color":"dark_gray","italic":false}]] 1
 item replace entity @s container.13 with minecraft:gray_dye[custom_name={"text":"미발견","color":"gray","bold":true,"italic":false},lore=[{"text":"이스터에그","color":"yellow","italic":false}, {"text":"01","color":"dark_gray","italic":false}]] 1
@@ -24,3 +29,4 @@ execute if score #clear achievement matches 1 run item replace entity @s contain
 execute if entity @s[tag=end_screen_1] run item replace entity @s armor.head with amethyst_shard[equippable={slot:"head",camera_overlay:"logo",swappable:false,equip_sound:"minecraft:entity.player.big_fall"},enchantments={binding_curse:1},tooltip_display={hide_tooltip:true}]
 execute if entity @s[tag=end_screen_2] run item replace entity @s armor.head with amethyst_shard[equippable={slot:"head",camera_overlay:"thx",swappable:false,equip_sound:"minecraft:entity.player.big_fall"},enchantments={binding_curse:1},tooltip_display={hide_tooltip:true}]
 execute if entity @s[tag=!end_screen_1, tag=!end_screen_2] run item replace entity @s armor.head with air
+

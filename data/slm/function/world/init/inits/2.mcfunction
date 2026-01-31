@@ -14,3 +14,5 @@ scoreboard players set #way_level var 0
 
 execute positioned 18 -25 19 run function slm:world/set_salt
 tag @a remove goto_2
+
+scoreboard players set #bg var 0

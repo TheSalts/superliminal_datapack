@@ -42,3 +42,7 @@ scoreboard players set #player_size var 0
 scoreboard players set #door_lower var 0
 scoreboard players set #door_upper var 0
 scoreboard players set #door_open var 0
+
+setblock 13 -61 19 minecraft:redstone_torch
+
+scoreboard players set #bg var 0
